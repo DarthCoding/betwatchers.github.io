@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Track Player Prop Bets Like a Pro with BetWatchers">
   <title>BetWatchers</title>
   <style>
@@ -11,40 +11,58 @@
       padding: 0;
       box-sizing: border-box;
     }
-
+  
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+  
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
       color: #ffffff;
       line-height: 1.6;
     }
-
+  
     header {
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 3rem 1rem 2rem;
       background-color: rgba(0, 0, 0, 0.3);
     }
-
+  
     header h1 {
       font-size: 3rem;
       color: #00ff88;
     }
-
+  
     header p {
       margin-top: 1rem;
       font-size: 1.2rem;
       color: #cccccc;
     }
-
+  
+    .intro {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #dddddd;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
     section.features {
       max-width: 1000px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       padding: 0 1rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
+      width: 100%;
+      box-sizing: border-box;
     }
-
+  
     .feature {
       background: rgba(255, 255, 255, 0.05);
       padding: 2rem;
@@ -52,12 +70,78 @@
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
-
+  
     .feature h3 {
       margin-bottom: 1rem;
       color: #00ffcc;
     }
-
+  
+    .cta {
+      text-align: center;
+      margin: 3rem 1rem;
+    }
+  
+    .cta a {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+  
+    .cta img {
+      width: 180px;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+  
+    .cta img:hover {
+      transform: scale(1.05);
+    }
+  
+    .screenshots {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+  
+    .screenshots h2 {
+      margin-bottom: 2rem;
+      color: #00ffcc;
+      font-size: 2rem;
+    }
+  
+    .carousel {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 1rem;
+      gap: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .carousel img {
+      flex: 0 0 auto;
+      width: 240px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      scroll-snap-align: start;
+      transition: transform 0.3s ease;
+    }
+  
+    .carousel img:hover {
+      transform: scale(1.03);
+    }
+  
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -65,35 +149,100 @@
       color: #aaaaaa;
       font-size: 0.9rem;
     }
-
+  
     a {
       color: #00ffcc;
       text-decoration: none;
     }
-
+  
     a:hover {
       text-decoration: underline;
     }
-  </style>
+  
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+  
+      .intro {
+        font-size: 1rem;
+      }
+  
+      .cta img {
+        width: 150px;
+      }
+  
+      .carousel img {
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .carousel img {
+        width: 180px;
+        min-width: 180px;
+      }
+      
+      .screenshots {
+        padding: 0 0.5rem;
+      }
+    }
+  </style>  
 </head>
 <body>
+
   <header>
     <h1>BetWatchers</h1>
     <p>Track Player Prop Bets Like a Pro</p>
   </header>
 
+  <div class="intro">
+    <p>BetWatchers helps you catch the best betting opportunities by sending real-time alerts when player prop bets across sportsbooks like FanDuel, DraftKings, ESPNBet and BetMGM match your custom criteria. Designed for sports bettors who want an edge, BetWatchers compares odds, tracks live stats, and helps you act fast—so you never miss the best bets with the best odds.</p>
+  </div>
+
   <section class="features">
     <div class="feature">
-      <h3>Real-Time Notifications</h3>
-      <p>Get alerted when lines move or your favorite player hits a key stat.</p>
+      <h3>📲 Real-Time Notifications</h3>
+      <p>Get alerted instantly when your watchlist matches real betting opportunities during live games.</p>
     </div>
     <div class="feature">
-      <h3>Compare Sportsbooks</h3>
-      <p>See what FanDuel, DraftKings, and others are offering at a glance.</p>
+      <h3>📈 Compare Sportsbooks</h3>
+      <p>See and act on the best available lines from FanDuel, DraftKings, BetMGM, and more in one view.</p>
     </div>
     <div class="feature">
-      <h3>Fully Customizable</h3>
-      <p>Choose which players to track and set your own alert thresholds.</p>
+      <h3>⚙️ Fully Customizable</h3>
+      <p>Set your own rules—track specific players, bet types, stats, and thresholds with ease.</p>
+    </div>
+    <div class="feature">
+      <h3>📊 Live Stat Tracking</h3>
+      <p>Stay updated on your favorite players’ performance in real time as the games unfold.</p>
+    </div>
+    <div class="feature">
+      <h3>🛡️ Privacy-Focused</h3>
+      <p>No betting or gambling happens in the app. BetWatchers simply monitors and alerts—nothing more.</p>
+    </div>
+    <div class="feature">
+      <h3>🧠 Smart Odds Monitoring</h3>
+      <p>Let our system scan thousands of odds so you don’t have to. Alerts are sent only when conditions are met.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Find us on the Apple App Store!</h2>
+    <a href="https://apps.apple.com/us/app/betwatchers-prop-bet-alerts/id6749284482" target="_blank">
+      <img src="find_us_app_store.png" alt="Download on the App Store"/>
+    </a>
+  </div>
+
+  <section class="screenshots">
+    <h2>See BetWatchers in Action</h2>
+    <div class="carousel">
+      <img src="betatcher_notifcations_lock_screen.jpg" alt="App Screenshot 1" />
+      <img src="betatcher_welcome_alert.png" alt="App Screenshot 2" />
+      <img src="betwatcher_home_sport_page.png" alt="App Screenshot 3" />
+      <img src="betwatcher_list_page.png" alt="App Screenshot 4" />
+      <img src="betwatcher_player_page_bottom.png" alt="App Screenshot 5" />
+      <img src="betwatcher_player_page_top.png" alt="App Screenshot 6" />
     </div>
   </section>
 
@@ -104,6 +253,6 @@
       <a href="/privacy-policy.html">Privacy Policy</a>
     </p>
   </footer>
-  
+
 </body>
 </html>
